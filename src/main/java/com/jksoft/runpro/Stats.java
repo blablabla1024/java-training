@@ -6,6 +6,7 @@ import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,11 +20,16 @@ import org.xml.sax.SAXException;
 
 public class Stats {
 	
+	private List<Lap> laps;
+	
 private static String newLine = System.lineSeparator();
+
+	public Stats(){
+		laps = new ArrayList<Lap>();
+	}
 	
 	
-	
-	private static String trainingToString(ArrayList<Lap> laps){
+	private String trainingToString(){
 		StringBuilder sb = new StringBuilder();
 		int i = 1;
 		for(Lap l: laps){
@@ -37,14 +43,8 @@ private static String newLine = System.lineSeparator();
 		return sb.toString();
 	}
 	
-	public void loadTrainingFromFile(){
+	public void execute(String[] args) throws URISyntaxException, ParserConfigurationException, SAXException, IOException{
 		
-	}
-
-	
-
-	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, URISyntaxException {
-				
 		Path path = Paths.get(ClassLoader.getSystemResource("Jakub_Karbowiak_2015-01-19_20-41-08.tcx").toURI());
 		File xmlFile = path.toFile();
 		
@@ -52,7 +52,7 @@ private static String newLine = System.lineSeparator();
 		DocumentBuilder db = dbf.newDocumentBuilder(); 
 		Document doc = db.parse(xmlFile);
 		
-		ArrayList<Lap> laps = new ArrayList<Lap>();
+		laps = new ArrayList<Lap>();
 			 
 		doc.getDocumentElement().normalize();
 	 		 
@@ -87,15 +87,30 @@ private static String newLine = System.lineSeparator();
 				System.out.println("----");
 				
 //				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-					 
 //					Element eElement = (Element) nNode;
 				
 				laps.add(lap);
-				
 			}
 		}
 		
-		System.out.println(trainingToString(laps));
+		System.out.println(trainingToString());
+		
+	}
+
+	
+	public static void main(String[] args){
+		
+		try {
+			new Stats().execute(args);
+		} catch (URISyntaxException e) {
+			throw new IllegalStateException();
+		} catch (ParserConfigurationException e) {
+			throw new IllegalStateException();
+		} catch (SAXException e) {
+			throw new IllegalStateException();
+		} catch (IOException e) {
+			throw new IllegalStateException();
+		}
 			
 	}
 

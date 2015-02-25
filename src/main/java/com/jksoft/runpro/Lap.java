@@ -4,7 +4,6 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Lap {
 
@@ -19,7 +18,7 @@ public class Lap {
 	private static DateTimeFormatter formatterToString = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 	private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 	
-	private List<Trackpoint> track;
+	private ArrayList<Trackpoint> track;
 	
 	private static String newLine = System.lineSeparator();
 	

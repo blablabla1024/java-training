@@ -51,3 +51,6 @@ target/**
 # project file
 .project
 /bin/
+
+# settings directory
+.settings/**

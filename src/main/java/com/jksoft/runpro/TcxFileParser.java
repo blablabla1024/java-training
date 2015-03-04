@@ -41,7 +41,8 @@ public class TcxFileParser {
 	private Lap parsLapElementNode(Element element) {
 		Lap lap = new Lap();
 
-		lap.setStartTime(element.getAttribute("StartTime"));
+		lap.setStartTime(DateConverterUtils
+				.convertStringToLocalDateTime(element.getAttribute("StartTime")));
 		Double d = Double.parseDouble(element
 				.getElementsByTagName("TotalTimeSeconds").item(0)
 				.getTextContent());
@@ -53,9 +54,6 @@ public class TcxFileParser {
 				.getElementsByTagName("MaximumSpeed").item(0).getTextContent()));
 		lap.setCalories(Integer.parseInt(element
 				.getElementsByTagName("Calories").item(0).getTextContent()));
-		
-//		TODO: sprwdziæ if (nNode.getNodeType() == Node.ELEMENT_NODE)
-		
 		lap.setAvgHeartRate(Integer.parseInt(element
 				.getElementsByTagName("AverageHeartRateBpm").item(0)
 				.getChildNodes().item(1).getTextContent()));
@@ -65,23 +63,7 @@ public class TcxFileParser {
 		lap.setAvgSpeed(Double.parseDouble(element
 				.getElementsByTagName("ns2:AvgSpeed").item(0).getTextContent()));
 
-//		NodeList nl = element.getElementsByTagName("Track").item(0)
-//				.getChildNodes();
-//		int j = nl.getLength();
-//		System.out.println(nl.item(0).getTextContent());
-//		System.out.println(nl.item(1).getTextContent());
-//		System.out.println(nl.item(2).getTextContent());
-//		System.out.println("----");
-//
-//		// if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-//		// Element eElement = (Element) nNode;
-
 		return lap;
-	}
-	
-	private Lap parseTrackElementNode(Element element) {
-//		TODO: implement
-		return null;
 	}
 
 	private Document createDocumentFromXmlFile(File xmlFile, DocumentBuilder db) {

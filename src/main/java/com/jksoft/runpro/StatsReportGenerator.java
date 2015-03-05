@@ -2,8 +2,11 @@ package com.jksoft.runpro;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.jksoft.runpro.to.Lap;
 
+@Component
 public class StatsReportGenerator {
 
 	private static String NEW_LINE = System.lineSeparator();

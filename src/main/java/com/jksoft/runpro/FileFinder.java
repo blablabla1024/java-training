@@ -5,6 +5,9 @@ import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class FileFinder {
 	
 	public File findFile(String filePath){

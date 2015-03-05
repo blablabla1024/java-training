@@ -17,6 +17,7 @@ import org.xml.sax.SAXException;
 
 import com.jksoft.runpro.to.Lap;
 
+
 public class TcxFileParser {
 
 	public List<Lap> parseTcxFile(File file) {

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TrainingCenterDatabase xmlns="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2" xmlns:ns2="http://www.garmin.com/xmlschemas/ActivityExtension/v2">
+    <Activities>
+        <Activity Sport="Running">
+            <Id>2015-03-05T10:12:05.000Z</Id>
+            <Lap StartTime="2015-03-05T10:12:05.125Z">
+                <TotalTimeSeconds>645.0</TotalTimeSeconds>
+                <DistanceMeters>5053.5999755859375</DistanceMeters>
+                <MaximumSpeed>11.387699804561237</MaximumSpeed>
+                <Calories>204</Calories>
+                <AverageHeartRateBpm>
+                    <Value>155</Value>
+                </AverageHeartRateBpm>
+                <MaximumHeartRateBpm>
+                    <Value>178</Value>
+                </MaximumHeartRateBpm>
+                <Intensity>Active</Intensity>
+                <TriggerMethod>Manual</TriggerMethod>
+                <Track>
+                    <Trackpoint>
+                        <Time>2015-03-15T10:15:33.125Z</Time>
+                        <Position>
+                            <LatitudeDegrees>51.07180667</LatitudeDegrees>
+                            <LongitudeDegrees>17.00031833</LongitudeDegrees>
+                        </Position>
+                        <AltitudeMeters>132.437</AltitudeMeters>
+                        <DistanceMeters>6887.39990234375</DistanceMeters>
+                        <HeartRateBpm>
+                            <Value>162</Value>
+                        </HeartRateBpm>
+                        <SensorState>Present</SensorState>
+                    </Trackpoint>                    
+                </Track>
+                <Extensions>
+                    <ns2:LX>
+                        <ns2:AvgSpeed>10.01242733001709</ns2:AvgSpeed>
+                    </ns2:LX>
+                </Extensions>
+            </Lap>
+            <Notes>Test. Geterki na wypasie :D</Notes>
+            <Training VirtualPartner="false">
+                <Plan Type="Workout" IntervalWorkout="false">
+                    <Name>Bieganie</Name>
+                    <Extensions/>
+                </Plan>
+            </Training>
+            <Creator xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Device_t">
+                <Name>Polar V800</Name>
+                <UnitId>0</UnitId>
+                <ProductID>13</ProductID>
+            </Creator>
+        </Activity>
+    </Activities>
+    <Author xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Application_t">
+        <Name>no application</Name>
+    </Author>
+</TrainingCenterDatabase>

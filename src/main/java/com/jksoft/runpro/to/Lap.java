@@ -24,10 +24,6 @@ public class Lap {
 		this.startTime = startTime;
 	}
 
-	public void setDuration(int seconds) {
-		this.duration = Duration.ofSeconds(seconds);
-	}
-
 	public void setDuration(Duration duration) {
 		this.duration = duration;
 	}

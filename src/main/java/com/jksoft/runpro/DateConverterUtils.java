@@ -1,5 +1,6 @@
 package com.jksoft.runpro;
 
+import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -20,6 +21,10 @@ public class DateConverterUtils {
 
 	public static LocalDateTime convertStringToLocalDateTime(String dateTime) {
 		return LocalDateTime.parse(dateTime, formatter);
+	}
+	
+	public static Duration convertTimeInSecondsToDuration(int seconds) {
+		return Duration.ofSeconds(seconds);
 	}
 
 }

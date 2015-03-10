@@ -41,7 +41,7 @@ public class StatsReportGeneratorTest {
 		Lap lap = new Lap();
 		lap.setStartTime(DateConverterUtils
 				.convertStringToLocalDateTime("2015-01-19T19:51:53.750Z"));
-		lap.setDuration(1467);
+		lap.setDuration(DateConverterUtils.convertTimeInSecondsToDuration(1467));
 		lap.setDistance(4270.7998046875);
 		lap.setMaxSpeed(13.59999942779541);
 		lap.setCalories(0);
@@ -109,7 +109,7 @@ public class StatsReportGeneratorTest {
 		Lap lap = new Lap();
 		lap.setStartTime(DateConverterUtils
 				.convertStringToLocalDateTime("2015-01-19T19:51:53.750Z"));
-		lap.setDuration(1521);
+		lap.setDuration(DateConverterUtils.convertTimeInSecondsToDuration(1521));
 		lap.setDistance(4270.9998046875);
 		lap.setMaxSpeed(13.59999942779541);
 		lap.setCalories(352);

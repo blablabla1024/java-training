@@ -17,7 +17,6 @@ import org.xml.sax.SAXException;
 
 import com.jksoft.runpro.to.Lap;
 
-
 public class TcxFileParser {
 
 	public List<Lap> parseTcxFile(File file) {
@@ -33,13 +32,13 @@ public class TcxFileParser {
 			Node nNode = nList.item(i);
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) nNode;
-				laps.add(parsLapElementNode(element));
+				laps.add(parseLapElementNode(element));
 			}
 		}
 		return laps;
 	}
 
-	private Lap parsLapElementNode(Element element) {
+	private Lap parseLapElementNode(Element element) {
 		Lap lap = new Lap();
 
 		lap.setStartTime(DateConverterUtils
@@ -47,7 +46,8 @@ public class TcxFileParser {
 		Double d = Double.parseDouble(element
 				.getElementsByTagName("TotalTimeSeconds").item(0)
 				.getTextContent());
-		lap.setDuration(d.intValue());
+		lap.setDuration(DateConverterUtils.convertTimeInSecondsToDuration(d
+				.intValue()));
 		lap.setDistance(Double.parseDouble(element
 				.getElementsByTagName("DistanceMeters").item(0)
 				.getTextContent()));

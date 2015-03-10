@@ -27,8 +27,7 @@ public class Stats {
 
 	public void execute(String[] args) {
 
-		File xmlFile = fileFinder
-				.findFile("Jakub_Karbowiak_2015-01-19_20-41-08.tcx");
+		File xmlFile = fileFinder.findFile(args[0]);
 
 		List<Lap> laps = tcxFileParser.parseTcxFile(xmlFile);
 

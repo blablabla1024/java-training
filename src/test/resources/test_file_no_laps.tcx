@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TrainingCenterDatabase xmlns="http://www.garmin.com/xmlschemas/TrainingCenterDatabase/v2" xmlns:ns2="http://www.garmin.com/xmlschemas/ActivityExtension/v2">
+    <Activities>
+        <Activity Sport="Running">
+            <Id>2015-03-05T10:12:05.000Z</Id>
+            <Notes>Test. Geterki na wypasie :D</Notes>
+            <Training VirtualPartner="false">
+                <Plan Type="Workout" IntervalWorkout="false">
+                    <Name>Bieganie</Name>
+                    <Extensions/>
+                </Plan>
+            </Training>
+            <Creator xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Device_t">
+                <Name>Polar V800</Name>
+                <UnitId>0</UnitId>
+                <ProductID>13</ProductID>
+            </Creator>
+        </Activity>
+    </Activities>
+    <Author xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="Application_t">
+        <Name>no application</Name>
+    </Author>
+</TrainingCenterDatabase>

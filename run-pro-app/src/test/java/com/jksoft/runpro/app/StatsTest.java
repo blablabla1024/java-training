@@ -1,4 +1,4 @@
-package com.jksoft.runpro;
+package com.jksoft.runpro.app;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -6,7 +6,12 @@ import java.util.List;
 
 import org.junit.Test;
 
-import com.jksoft.runpro.to.Lap;
+import com.jksoft.runpro.app.FileFinder;
+import com.jksoft.runpro.app.OutputPrinter;
+import com.jksoft.runpro.app.Stats;
+import com.jksoft.runpro.app.StatsReportGenerator;
+import com.jksoft.runpro.app.TcxFileParser;
+import com.jksoft.runpro.app.to.Lap;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
@@ -19,7 +24,8 @@ public class StatsTest {
 		//given
 		FileFinder fileFinder = mock(FileFinder.class);
 		File file = new File("path");
-		when(fileFinder.findFile("Jakub_Karbowiak_2015-01-19_20-41-08.tcx")).thenReturn(file);
+		String filePath = "Jakub_Karbowiak_2015-01-19_20-41-08.tcx";
+		when(fileFinder.findFile(filePath)).thenReturn(file);
 		
 		TcxFileParser tcxFileParser = mock(TcxFileParser.class);
 		List<Lap> laps = new ArrayList<>();
@@ -35,7 +41,7 @@ public class StatsTest {
 		OutputPrinter outputPrinter = mock(OutputPrinter.class);
 		Stats stats = new Stats(fileFinder, tcxFileParser, statsReportGenerator, outputPrinter);
 		//when
-		stats.execute(null);
+		stats.execute(new String[]{filePath});
 		//then
 		verify(outputPrinter).print(report);
 	}

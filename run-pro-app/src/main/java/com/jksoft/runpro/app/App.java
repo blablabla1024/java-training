@@ -1,4 +1,4 @@
-package com.jksoft.runpro;
+package com.jksoft.runpro.app;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

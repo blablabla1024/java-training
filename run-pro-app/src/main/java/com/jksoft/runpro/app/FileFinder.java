@@ -1,4 +1,4 @@
-package com.jksoft.runpro;
+package com.jksoft.runpro.app;
 
 import java.io.File;
 import java.net.URISyntaxException;

@@ -1,4 +1,4 @@
-package com.jksoft.runpro;
+package com.jksoft.runpro.app;
 
 import static org.junit.Assert.*;
 
@@ -9,7 +9,10 @@ import java.util.List;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.jksoft.runpro.to.Lap;
+import com.jksoft.runpro.app.DateConverterUtils;
+import com.jksoft.runpro.app.FileFinder;
+import com.jksoft.runpro.app.TcxFileParser;
+import com.jksoft.runpro.app.to.Lap;
 
 public class TcxFileParserTest {
 	

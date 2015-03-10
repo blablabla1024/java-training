@@ -1,4 +1,4 @@
-package com.jksoft.runpro;
+package com.jksoft.runpro.app;
 
 import java.time.Duration;
 import java.time.LocalDateTime;

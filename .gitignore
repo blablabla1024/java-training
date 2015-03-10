@@ -43,14 +43,15 @@ Temporary Items
 .apdisk
 
 # target directory
-target/**
+**/target/**
 
 # classpath file
-.classpath
+**/.classpath
+
 
 # project file
-.project
-/bin/
+**/.project
+**/bin/
 
 # settings directory
-.settings/**
+**/.settings/**

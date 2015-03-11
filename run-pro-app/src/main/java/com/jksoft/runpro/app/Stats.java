@@ -18,7 +18,8 @@ public class Stats {
 
 	@Autowired
 	public Stats(FileFinder fileFinder, TcxFileParser tcxFileParser,
-			StatsReportGenerator statsReportGenerator, OutputPrinter consoleOutputPrinter) {
+			StatsReportGenerator statsReportGenerator,
+			OutputPrinter consoleOutputPrinter) {
 		this.fileFinder = fileFinder;
 		this.tcxFileParser = tcxFileParser;
 		this.statsReportGenerator = statsReportGenerator;
@@ -32,7 +33,7 @@ public class Stats {
 		List<Lap> laps = tcxFileParser.parseTcxFile(xmlFile);
 
 		String report = statsReportGenerator.generateStatsReport(laps);
-		
+
 		outputPrinter.print(report);
 
 	}

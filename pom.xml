@@ -9,6 +9,10 @@
 	<url>http://maven.apache.org</url>
 	<modules>
 		<module>run-pro-app</module>
+		<module>run-pro-api</module>
+		<module>run-pro-common</module>
+		<module>run-pro-core</module>
+		<module>run-pro-db</module>
 		<module>run-pro-web</module>
 	</modules>
   
